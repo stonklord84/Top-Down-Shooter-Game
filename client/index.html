@@ -1,0 +1,58 @@
+<style>
+    body{
+        overflow: hidden;
+        margin: 0;
+    }
+    #gamecanvas{
+        border: none;
+    }
+    
+    #nickname{
+        position: absolute;
+        width: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 50%;
+        visibility: visible;
+    }
+    #wehrmacht{
+        width: 90;
+        height: 30;
+        background-color: rgb(77,93,83);
+        color: lightgray;
+        position: absolute;
+        left: 40%;
+        transform: translateX(-50%);
+        bottom: 40%;
+        border: none;
+        visibility: visible;
+    }
+    #redarmy{
+        width: 90;
+        height: 30;
+        background-color: red;
+        color: yellow;
+        position: absolute;
+        left: 60%;
+        transform: translateX(-50%);
+        bottom: 40%;
+        border: none;
+        visibility: visible;
+    }
+    #deathmessage{
+        position: absolute;
+        bottom:55%;
+        left: 50%;
+        transform: translateX(-50%);
+        visibility: visible;
+    }
+
+</style>
+<canvas id="gamecanvas"></canvas>
+<script src = "socket.io/socket.io.js"></script>
+<script src = "gameloop.js" type = "module"></script>
+<button id = 'wehrmacht'>Wehrmacht</button>
+<button id = 'redarmy'>Red Army</button>
+<input type = 'text' id = 'nickname' autocomplete = "off">
+<label id = 'label' for = 'nickname'>nickname</label>
+<h1 id = 'deathmessage'>You died</h1>
